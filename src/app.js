@@ -1,10 +1,8 @@
 const express = require('express');
 require('dotenv').config()
-const mongoose = require('mongoose');
 const ShortUrl = require('./models/shortUrl')
 const app = express()
 
-mongoose.connect(process.env.MONGO_URI)
 app.set('view engine','ejs');
 app.use(express.urlencoded({extended:false}))
 
